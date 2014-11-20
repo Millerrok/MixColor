@@ -1,0 +1,24 @@
+<section class="controls animate" >
+    <a class="button animate" data-role="reset" ng-click="reset()" href="javascript:void(0)">Reset</a>
+    <a class="button animate" data-role="save" ng-click="save()" href="javascript:void(0)">Save</a>
+    <a class="button animate" data-role="load" ng-click="load()" href="javascript:void(0)">Load</a>
+</section>
+<section  class="platte-container">
+    <asite class="color-toolbar title" >
+        Plate
+        <div class="container">
+               <span draggable-element  color-item  ng-repeat="element in palettes"  elementtype="palette"  elementid="{{element.id}}" class='color' data-name='{{element.name}}' ></span>
+        </div>
+    </asite>
+    <article class="grid">
+        <section class="container" >
+            <span droppable-element  draggable-element  ng-repeat="element in grid" elementtype="grid" elementid="{{element.id}}" class="box-item"
+                    style="background-color: rgb({{element.r}},{{element.g}},{{element.b}})"></span>
+        </section>
+    </article>
+    <textarea class="log-change" rows="10">
+        {{grid}}
+    </textarea>
+</section>
+
+<div class="alert" ng-show="alert">{{alert}}</div>

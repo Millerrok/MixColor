@@ -1,0 +1,31 @@
+body{
+    font-family:arial;
+}
+@boxSize:25px;
+.animate{
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+}
+.centerAbs{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+}
+.itemBoxSize(@size:@boxSize){
+    width:@size;
+    height:@size;
+}
+.platte-container{
+    margin: 50px auto;
+    display: table;
+}
+
+.color-item{
+    .itemBoxSize;
+    border-radius: 3px;
+    cursor: move;
+    border:1px solid #000;
+}

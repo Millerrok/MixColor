@@ -1,0 +1,34 @@
+.color-toolbar{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 100px;
+
+  .container{
+    box-shadow: -5px 0 20px -10px #313131;
+  }
+
+  .color{
+    margin: 5px;
+    display: block;
+    position: relative;
+    .color-item;
+
+    &:after{
+      top: 50%;
+      margin-top: -.5em;
+      position: absolute;
+      left: @boxSize*1.5;
+      content: attr(data-name);
+//      &:first-letter{
+//        text-transform: uppercase;
+//      }
+    }
+    &:hover{
+      margin: 4px;
+      zoom: 1.1;
+      &:after{
+        zoom: 1;
+      }
+    }
+  }
+}
